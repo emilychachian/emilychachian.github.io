@@ -1,0 +1,12 @@
+.user-list {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px; 
+    padding-left: 3em; 
+    cursor: pointer;
+
+    img {
+        height: 50px;
+        border-radius: 50px;
+    }
+}
