@@ -1,20 +1,6 @@
-// since placeholders aren't accessible, 
-// I'm using a label to tell screen reader users 
-// what the input field is for
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-.header-search {
+.search {
     display: flex;
     justify-content: center;
-    padding: 20px 0; 
+    padding: 40px 0; 
     height: 30px;
 }
