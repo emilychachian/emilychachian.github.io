@@ -1,10 +1,5 @@
-export default function dateFormatter(date) {
-  let currentDatetime = new Date();
-  let formattedDate =
-    currentDatetime.getDate() +
-    "/" +
-    (currentDatetime.getMonth() + 1) +
-    "/" +
-    currentDatetime.getFullYear();
+export default function dateFormatter(date) { 
+  let d = new Date (date);
+  let formattedDate = d.toLocaleDateString('en-GB'); 
   return formattedDate;
 }
