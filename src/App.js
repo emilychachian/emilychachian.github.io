@@ -1,28 +1,29 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header/Header";
-import SearchBar from "./components/SearchBar/SearchBar";
-import UserList from "./components/UserList/UserList"
+import UserList from "./components/UserList/UserList";
 import styles from "./styles/styles.scss";
 
 function App() {
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([]);
 
-  useEffect(async () => {
-    await fetch('https://api.github.com/orgs/grupotesseract/public_members')
-    .then((res) => res.json())
-    .then((data) => {
-    setUsers(data)
-    })
-  }, [])
+  useEffect(() => {
+    async function getUsers() {
+      await fetch("https://api.github.com/orgs/grupotesseract/public_members")
+        .then((res) => res.json())
+        .then((data) => {
+          setUsers(data);
+        });
+    }
+  
+    getUsers();
+  }, []);
 
   return (
     <React.Fragment>
       <Header />
-      <SearchBar />
-      <UserList users={users}/> 
+      {users && users.length > 0 && <UserList users={users} /> }
     </React.Fragment>
   );
-
-}
+  }
 
 export default App;
