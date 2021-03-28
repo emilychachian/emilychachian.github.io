@@ -1,27 +1,27 @@
-const isDevelopment = process.env.NODE_ENV === "development";
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const isDevelopment = process.env.NODE_ENV === 'development'
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.module\.s(a|c)ss$/,
         loader: [
-          isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
+          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               modules: true,
               sourceMap: isDevelopment,
             },
           },
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
               sourceMap: isDevelopment,
             },
@@ -32,10 +32,10 @@ module.exports = {
         test: /\.s(a|c)ss$/,
         exclude: /\.module.(s(a|c)ss)$/,
         loader: [
-          isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
-          "css-loader",
+          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
               sourceMap: isDevelopment,
             },
@@ -45,12 +45,12 @@ module.exports = {
     ],
     plugins: [
       new MiniCssExtractPlugin({
-        filename: isDevelopment ? "[name].css" : "[name].[hash].css",
-        chunkFilename: isDevelopment ? "[id].css" : "[id].[hash].css",
+        filename: isDevelopment ? '[name].css' : '[name].[hash].css',
+        chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css',
       }),
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx", ".scss"],
+    extensions: ['.js', '.jsx', '.scss'],
   },
-};
+}

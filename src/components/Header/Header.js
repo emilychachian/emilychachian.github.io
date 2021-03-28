@@ -1,4 +1,4 @@
-import logo from "../../assets/logo.svg"
+import logo from '../../assets/logo.svg'
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

@@ -1,8 +1,9 @@
-.ui.card a, .ui.cards>.card a {
-    cursor: auto; 
-    padding-right: 20px;
+.warning {
+    text-align: center;
+    color:rgba(0,0,0,.4)
 }
 
-user-card { 
-    left: 20em; 
+a {
+    padding-right: 20px;
+    cursor: text;
 }
