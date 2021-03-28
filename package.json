@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "github-search -d build",
+    "deploy": "gh-pages -d build",
     "format": "prettier-eslint --write \"{,!(node_modules)/**/}*.{js}\""
   },
   "eslintConfig": {
@@ -47,6 +47,7 @@
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "gh-pages": "^3.1.0",
     "mini-css-extract-plugin": "^1.3.9",
     "node-sass": "^5.0.0",
     "prettier": "^2.2.1",
