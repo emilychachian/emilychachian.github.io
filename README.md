@@ -5,7 +5,7 @@
 * [Setup](#setup)
 
 ### General info
-An app that uses the Github API to render dynamically a list of the Grupo Tesseract members, allowing you to see more information about each member. You can filter the members by their login.
+An app that uses the Github API to render dynamically a list of the Grupo Tesseract members, allowing you to see more information about each member. You can filter the members by their login. Here's a [preview](https://emilychachian.github.io/github-search/)!
 
 ### Technologies
 * JavaScript;
